@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jakub Gierałtowski Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'style.css' %}">
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="header" id="header">
+
+            <ul>
+
+                <li><a href="">Jakub Gierałtowski</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#content">O mnie</a></li>
+                <li><a href="http://127.0.0.1:8000/blog/">Blog</a></li>
+
+            </ul>
+
+        </div>
+        <div class="content" id="content">
+
+            <div class="aboutme">
+
+                <div class="title"><h1>About Me</h1></div>
+                <div class="photo"><img src="{% static 'ww.png' %}"></div>
+                <div class="info"><h2>Hi i'm Jacob Gieraltowski and I'am python developer. I use django and flask to build web apps. I am simply a high school student ,who is interested in computer science and martial arts. I am also into machine learning which I am now exploring.</h2></div>
+
+            </div>
+
+        </div>
+        <div class="footer">
+
+            <h1>Jakub Gierałtowski © All Rights Reserved</h1>
+            <a href="https://github.com/GieralZiomal" target="blank">Github</a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

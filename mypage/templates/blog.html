@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jakub Gierałtowski Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'style.css' %}">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="header" id="header">
+
+            <ul>
+
+                <li><a href="">Jakub Gierałtowski</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="http://127.0.0.1:8000">Artykuły</a></li>
+
+            </ul>
+
+        </div>
+        <div class="content" id="content">
+
+            {% block content %}
+            <div class="aboutmeblog">
+
+                <div class="title"><h1>Artykuły</h1></div>
+                {% for articles in articleslist %}
+
+                <a href="http://127.0.0.1:8000/article/{{articles.id}}"><h1>{{articles.title}}</h1></a>
+        
+                {% endfor %}
+
+            </div>
+
+            {% endblock %}
+        </div>
+        <div class="footer">
+
+            <h1>Jakub Gierałtowski © All Rights Reserved</h1>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
